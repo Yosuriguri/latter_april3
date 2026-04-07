@@ -1,168 +1,204 @@
-import React from 'react';
-import { 
-  Handshake, 
-  TrendingUp, 
-  Award, 
-  CheckCircle2, 
-  ArrowRightCircle, 
-  Building2, 
-  ShieldCheck,
-  Percent,
-  Settings
-} from 'lucide-react';
-
-const App = () => {
-  return (
-    <div className="min-h-screen bg-gray-100 py-10 px-4 sm:px-6 lg:px-8 font-sans">
-      {/* Flyer Container (A4 Ratio Aspect) */}
-      <div className="max-w-4xl mx-auto bg-white shadow-2xl rounded-xl overflow-hidden border border-gray-200">
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성과공유제 홍보 전단지</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
         
-        {/* Header Section */}
-        <div className="bg-gradient-to-r from-blue-700 to-indigo-800 text-white p-12 text-center relative overflow-hidden">
-          <div className="absolute top-0 right-0 p-4 opacity-10">
-            <Handshake size={200} />
-          </div>
-          <div className="relative z-10">
-            <p className="text-blue-200 font-bold tracking-widest mb-2">동반성장의 첫걸음</p>
-            <h1 className="text-5xl font-extrabold mb-4 leading-tight">
-              함께 혁신하고 성과를 나누는<br />
-              <span className="text-yellow-400">성과공유제(Benefit Sharing)</span>
-            </h1>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              위탁기업과 수탁기업이 공동의 목표를 달성하여 창출된 성과를<br />
-              사전에 합의한 방식으로 공정하게 나누는 상생협력 제도입니다.
-            </p>
-          </div>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background-color: white !important;
+                padding: 0 !important;
+            }
+            .shadow-2xl {
+                shadow: none !important;
+                border: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 py-10 px-4 sm:px-6 lg:px-8">
+
+    <!-- Flyer Container (A4 Ratio Aspect) -->
+    <div class="max-w-4xl mx-auto bg-white shadow-2xl rounded-xl overflow-hidden border border-gray-200">
+        
+        <!-- Header Section -->
+        <div class="bg-gradient-to-r from-blue-700 to-indigo-800 text-white p-12 text-center relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-10">
+                <i data-lucide="handshake" style="width: 200px; height: 200px;"></i>
+            </div>
+            <div class="relative z-10">
+                <p class="text-blue-200 font-bold tracking-widest mb-2 uppercase">The First Step for Co-existence</p>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+                    함께 혁신하고 성과를 나누는<br />
+                    <span class="text-yellow-400 font-black">성과공유제(Benefit Sharing)</span>
+                </h1>
+                <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto font-light">
+                    위탁기업과 수탁기업이 공동의 목표를 달성하여 창출된 성과를<br />
+                    사전에 합의한 방식으로 공정하게 나누는 상생협력 제도입니다.
+                </p>
+            </div>
         </div>
 
-        {/* Core Value Section */}
-        <div className="p-10 bg-blue-50 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-lg shadow-sm border-t-4 border-blue-500 text-center">
-            <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-full mb-4">
-              <TrendingUp size={24} />
+        <!-- Core Value Section -->
+        <div class="p-10 bg-blue-50 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-sm border-t-4 border-blue-500 text-center">
+                <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-full mb-4">
+                    <i data-lucide="trending-up"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2 text-gray-800">생산성 향상</h3>
+                <p class="text-sm text-gray-600">공정 개선 및 원가 절감을 통한 기업 경쟁력 강화</p>
             </div>
-            <h3 className="font-bold text-lg mb-2 text-gray-800">생산성 향상</h3>
-            <p className="text-sm text-gray-600">공정 개선 및 원가 절감을 통한 기업 경쟁력 강화</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm border-t-4 border-blue-500 text-center">
-            <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-full mb-4">
-              <ShieldCheck size={24} />
+            <div class="bg-white p-6 rounded-lg shadow-sm border-t-4 border-blue-500 text-center">
+                <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-full mb-4">
+                    <i data-lucide="shield-check"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2 text-gray-800">파트너십 강화</h3>
+                <p class="text-sm text-gray-600">장기적인 협력 관계 구축으로 공급망 안정성 확보</p>
             </div>
-            <h3 className="font-bold text-lg mb-2 text-gray-800">파트너십 강화</h3>
-            <p className="text-sm text-gray-600">장기적인 협력 관계 구축으로 공급망 안정성 확보</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm border-t-4 border-blue-500 text-center">
-            <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-full mb-4">
-              <Award size={24} />
+            <div class="bg-white p-6 rounded-lg shadow-sm border-t-4 border-blue-500 text-center">
+                <div class="inline-flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-full mb-4">
+                    <i data-lucide="award"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-2 text-gray-800">사회적 가치</h3>
+                <p class="text-sm text-gray-600">동반성장 문화를 확산하고 ESG 경영 실천</p>
             </div>
-            <h3 className="font-bold text-lg mb-2 text-gray-800">사회적 가치</h3>
-            <p className="text-sm text-gray-600">동반성장 문화를 확산하고 ESG 경영 실천</p>
-          </div>
         </div>
 
-        {/* Benefits Section */}
-        <div className="p-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 flex items-center">
-            <div className="w-2 h-8 bg-blue-600 mr-3 rounded-full"></div>
-            성과공유제 도입 혜택
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="mt-1 bg-indigo-100 p-2 rounded-lg text-indigo-600 mr-4">
-                  <Percent size={20} />
+        <!-- Benefits Section -->
+        <div class="p-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 flex items-center">
+                <div class="w-2 h-8 bg-blue-600 mr-3 rounded-full"></div>
+                성과공유제 도입 혜택
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="mt-1 bg-indigo-100 p-2 rounded-lg text-indigo-600 mr-4">
+                            <i data-lucide="percent" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-indigo-900">세제 혜택 및 법인세 감면</h4>
+                            <p class="text-gray-600 text-sm">출연금의 10% 세액공제 및 상생협력기금 출연 시 혜택 제공</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="mt-1 bg-indigo-100 p-2 rounded-lg text-indigo-600 mr-4">
+                            <i data-lucide="settings" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-indigo-900">정부 지원사업 가점</h4>
+                            <p class="text-gray-600 text-sm">동반성장지수 평가 가점 및 공공조달 참여 시 우대 혜택</p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                  <h4 className="font-bold text-lg text-indigo-900">세제 혜택 및 법인세 감면</h4>
-                  <p className="text-gray-600 text-sm">출연금의 10% 세액공제 및 상생협력기금 출연 시 혜택 제공</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="mt-1 bg-indigo-100 p-2 rounded-lg text-indigo-600 mr-4">
-                  <Settings size={20} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg text-indigo-900">정부 지원사업 가점</h4>
-                  <p className="text-gray-600 text-sm">동반성장지수 평가 가점 및 공공조달 참여 시 우대 혜택</p>
-                </div>
-              </div>
-            </div>
 
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="mt-1 bg-green-100 p-2 rounded-lg text-green-600 mr-4">
-                  <CheckCircle2 size={20} />
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="mt-1 bg-green-100 p-2 rounded-lg text-green-600 mr-4">
+                            <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-green-900">기술보호 및 공동 R&D</h4>
+                            <p class="text-gray-600 text-sm">공동 특허 출원 및 기술 자료 임치 비용 지원</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="mt-1 bg-green-100 p-2 rounded-lg text-green-600 mr-4">
+                            <i data-lucide="building-2" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-green-900">판로 확대 지원</h4>
+                            <p class="text-gray-600 text-sm">장기 계약 체결 및 물량 확대 보장으로 안정적 수익 구조 형성</p>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                  <h4 className="font-bold text-lg text-green-900">기술보호 및 공동 R&D</h4>
-                  <p className="text-gray-600 text-sm">공동 특허 출원 및 기술 자료 임치 비용 지원</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="mt-1 bg-green-100 p-2 rounded-lg text-green-600 mr-4">
-                  <Building2 size={20} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg text-green-900">판로 확대 지원</h4>
-                  <p className="text-gray-600 text-sm">장기 계약 체결 및 물량 확대 보장으로 안정적 수익 구조 형성</p>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
 
-        {/* Process Section */}
-        <div className="bg-gray-50 p-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-10 text-center">도입 및 운영 프로세스</h2>
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 md:space-x-4">
-            {[
-              { step: "01", title: "사전 합의", desc: "성과 목표 및 배분 방식 설정" },
-              { step: "02", title: "계약 체결", desc: "성과공유제 계약 및 과제 등록" },
-              { step: "03", title: "과제 수행", desc: "기술 개발 및 프로세스 개선" },
-              { step: "04", title: "성과 평가", desc: "목표 달성 여부 확인 및 검증" },
-              { step: "05", title: "성과 배분", desc: "합의된 방식에 따른 이익 공유" }
-            ].map((item, idx) => (
-              <React.Fragment key={idx}>
-                <div className="flex-1 text-center group">
-                  <div className="w-12 h-12 bg-white border-2 border-blue-500 rounded-full flex items-center justify-center mx-auto mb-3 text-blue-600 font-bold shadow-sm group-hover:bg-blue-500 group-hover:text-white transition-colors">
-                    {item.step}
-                  </div>
-                  <h4 className="font-bold text-gray-800 mb-1">{item.title}</h4>
-                  <p className="text-xs text-gray-500">{item.desc}</p>
+        <!-- Process Section -->
+        <div class="bg-gray-50 p-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-10 text-center">도입 및 운영 프로세스</h2>
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 md:space-x-4">
+                <!-- Step 01 -->
+                <div class="flex-1 text-center">
+                    <div class="w-12 h-12 bg-white border-2 border-blue-500 rounded-full flex items-center justify-center mx-auto mb-3 text-blue-600 font-bold shadow-sm">01</div>
+                    <h4 class="font-bold text-gray-800 mb-1 text-sm">사전 합의</h4>
+                    <p class="text-[10px] text-gray-500">성과 목표 및 배분 방식 설정</p>
                 </div>
-                {idx < 4 && <ArrowRightCircle className="hidden md:block text-gray-300" size={20} />}
-              </React.Fragment>
-            ))}
-          </div>
+                <i data-lucide="arrow-right-circle" class="hidden md:block text-gray-300 w-5 h-5"></i>
+                <!-- Step 02 -->
+                <div class="flex-1 text-center">
+                    <div class="w-12 h-12 bg-white border-2 border-blue-500 rounded-full flex items-center justify-center mx-auto mb-3 text-blue-600 font-bold shadow-sm">02</div>
+                    <h4 class="font-bold text-gray-800 mb-1 text-sm">계약 체결</h4>
+                    <p class="text-[10px] text-gray-500">성과공유제 계약 및 과제 등록</p>
+                </div>
+                <i data-lucide="arrow-right-circle" class="hidden md:block text-gray-300 w-5 h-5"></i>
+                <!-- Step 03 -->
+                <div class="flex-1 text-center">
+                    <div class="w-12 h-12 bg-white border-2 border-blue-500 rounded-full flex items-center justify-center mx-auto mb-3 text-blue-600 font-bold shadow-sm">03</div>
+                    <h4 class="font-bold text-gray-800 mb-1 text-sm">과제 수행</h4>
+                    <p class="text-[10px] text-gray-500">기술 개발 및 프로세스 개선</p>
+                </div>
+                <i data-lucide="arrow-right-circle" class="hidden md:block text-gray-300 w-5 h-5"></i>
+                <!-- Step 04 -->
+                <div class="flex-1 text-center">
+                    <div class="w-12 h-12 bg-white border-2 border-blue-500 rounded-full flex items-center justify-center mx-auto mb-3 text-blue-600 font-bold shadow-sm">04</div>
+                    <h4 class="font-bold text-gray-800 mb-1 text-sm">성과 평가</h4>
+                    <p class="text-[10px] text-gray-500">목표 달성 여부 확인 및 검증</p>
+                </div>
+                <i data-lucide="arrow-right-circle" class="hidden md:block text-gray-300 w-5 h-5"></i>
+                <!-- Step 05 -->
+                <div class="flex-1 text-center">
+                    <div class="w-12 h-12 bg-white border-2 border-blue-500 rounded-full flex items-center justify-center mx-auto mb-3 text-blue-600 font-bold shadow-sm">05</div>
+                    <h4 class="font-bold text-gray-800 mb-1 text-sm">성과 배분</h4>
+                    <p class="text-[10px] text-gray-500">합의된 방식에 따른 이익 공유</p>
+                </div>
+            </div>
         </div>
 
-        {/* Footer / Call to Action */}
-        <div className="p-10 border-t border-gray-100 text-center">
-          <div className="bg-blue-600 text-white py-4 px-8 rounded-full inline-block font-bold text-lg shadow-lg hover:bg-blue-700 transition-colors cursor-pointer mb-8">
-            지금 바로 상생협력의 파트너가 되세요!
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto border-t pt-8">
-            <div className="flex items-center space-x-3">
-              <div className="bg-gray-100 p-2 rounded-full"><Handshake size={18} className="text-gray-600"/></div>
-              <span className="text-gray-700"><strong>문의처:</strong> 대·중소기업·농어업협력재단</span>
+        <!-- Footer / Call to Action -->
+        <div class="p-10 border-t border-gray-100 text-center">
+            <div class="bg-blue-600 text-white py-4 px-10 rounded-full inline-block font-bold text-lg shadow-lg hover:bg-blue-700 transition-colors cursor-pointer mb-8 no-print">
+                지금 바로 상생협력의 파트너가 되세요!
             </div>
-            <div className="flex items-center space-x-3">
-              <div className="bg-gray-100 p-2 rounded-full"><TrendingUp size={18} className="text-gray-600"/></div>
-              <span className="text-gray-700"><strong>홈페이지:</strong> www.benis.or.kr</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left max-w-2xl mx-auto border-t pt-8">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-gray-100 p-2 rounded-full text-gray-600"><i data-lucide="handshake" class="w-5 h-5"></i></div>
+                    <span class="text-gray-700"><strong>문의처:</strong> 대·중소기업·농어업협력재단</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <div class="bg-gray-100 p-2 rounded-full text-gray-600"><i data-lucide="globe" class="w-5 h-5"></i></div>
+                    <span class="text-gray-700"><strong>홈페이지:</strong> www.benis.or.kr</span>
+                </div>
             </div>
-          </div>
-          <p className="mt-8 text-gray-400 text-xs">본 제도는 상생협력법 제8조에 근거하여 운영되는 국가 공인 제도입니다.</p>
+            <p class="mt-8 text-gray-400 text-xs tracking-tight">본 제도는 상생협력법 제8조에 근거하여 운영되는 국가 공인 제도입니다.</p>
         </div>
 
-      </div>
-      
-      {/* Print Instructions (Optional) */}
-      <div className="max-w-4xl mx-auto mt-6 text-center text-gray-500 text-sm no-print">
-        * 이 페이지는 A4 사이즈 인쇄에 최적화되어 있습니다. (Ctrl+P를 눌러 인쇄하세요)
-      </div>
     </div>
-  );
-};
+    
+    <!-- Print Instructions (Optional) -->
+    <div class="max-w-4xl mx-auto mt-6 text-center text-gray-500 text-sm no-print">
+        * 이 페이지는 A4 사이즈 인쇄에 최적화되어 있습니다. (Ctrl+P를 눌러 인쇄하세요)
+    </div>
 
-export default App;
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
